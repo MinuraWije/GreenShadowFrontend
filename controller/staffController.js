@@ -154,7 +154,6 @@ $("#staff-table-tbody").on('click','tr',function (){
     let staffAddress = $(this).find(".address").text()
     let staffContactNum = $(this).find(".contactNum").text()
 
-    console.log("code"+staffId,"name"+staffName,"role"+staffRole,"des"+staffDesignation,"gen"+staffGender)
 
     $("#updateStaffbtn").click()
     $("#staffIdUpdate").text(staffId);
