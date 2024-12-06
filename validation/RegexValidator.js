@@ -3,7 +3,7 @@ export class RegexValidator {
         this.nameRegex = /^[A-Za-z\s]+$/;
         //this.typeRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         this.typeRegex = /^[A-Za-z\s]+$/;
-        this.statusRegex = /^[A-Za-z\s]+$/;
+        this.statusRegex = /^[A-Za-z\s_]+$/;           // /^[A-Za-z\s]+$/
 
         this.vehicleCodeRegex = /^V\d{3}$/;
         this.licensePlateNumRegex = /^[A-Za-z0-9\s]+$/;
