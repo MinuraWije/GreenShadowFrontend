@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/normalize.css">
+    <style>
+        .banner {
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("https://static.vecteezy.com/system/resources/previews/036/324/445/non_2x/order-clothes-from-online-clothing-store-using-credit-card-e-commerce-mobile-shopping-digital-or-virtual-marketplace-online-shopping-internet-store-flat-illustration-for-landing-page-web-design-vector.jpg");
+            background-size: cover;
+            background-position: center ;
+        }
+        .banner img {
+            width: 100%;
+            height: 92.3vh;
+        }
+        .banner div:first-child{
+            width: 100%;
+            height: 70vh;
+            background: 50%;
+            background-color: black;
+        }
+        .content {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            color: #fff;
+        }
+        .content h1 {
+            font-size: 70px;
+            margin-top: 80px;
+            color: #1ce889;
+        }
+        .content p {
+            margin: 20px auto;
+            font-weight: 100;
+            line-height: 25px;
+        }
+    </style>
+</head>
+<header id="header-section">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">POS System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <span class="nav-link active" aria-current="page" id="nav-home">Home</span>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link" id="nav-customer">Customers</span>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link" id="nav-item" >Items</span>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link" id="nav-order" >Orders</span>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link" id="nav-order-details">Order Details</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<body>
+
+<!--Home section-->
+<section id="dashboard-section">
+    <div class="banner">
+        <img src="assets/img_1.png">
+        <div></div>
+        <div class="content">
+            <h1>Welcome to Green Shadow</h1>
+            <!--<div>
+                <button id="buttonCon" type="button">CONTACT US</button>
+            </div>-->
+        </div>
+    </div>
+</section>
+<script src="assets/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
