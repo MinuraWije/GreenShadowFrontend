@@ -197,7 +197,7 @@ $("#btnDeleteLog").on('click', () => {
 
 
 $("#logSearchButton").on('click', () => {
-    const searchQuery = $("#searchBar").val().trim().toLowerCase();
+    const searchQuery = $("#searchLogsBar").val().trim().toLowerCase();
 
     if (!searchQuery) {
         alert("Please enter a search query.");
@@ -266,7 +266,7 @@ function suggestNames(input, callback) {
 
 
 function updateSuggestions(suggestions) {
-    const suggestionsList = $("#suggestions");
+    const suggestionsList = $("#logSuggestions");
 
     suggestionsList.empty();
 
@@ -274,15 +274,15 @@ function updateSuggestions(suggestions) {
         suggestionsList.append(`<li>${suggestion}</li>`);
     });
 }
-$("#searchBar").on('input', function() {
+$("#searchLogsBar").on('input', function() {
     const input = $(this).val();
     suggestNames(input,function (suggestions) {
         updateSuggestions(suggestions);
 
         if (input.trim() === '') {
-            $("#suggestions").hide();
+            $("#logSuggestions").hide();
         } else {
-            $("#suggestions").show();
+            $("#logSuggestions").show();
         }
     });
 });

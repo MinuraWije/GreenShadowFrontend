@@ -275,7 +275,7 @@ $("#btnDeleteStaff").on('click', () => {
 
 
 $("#staffSearchButton").on('click', () => {
-    const searchQuery = $("#searchBar").val().trim().toLowerCase();
+    const searchQuery = $("#searchStaffBar").val().trim().toLowerCase();
 
     if (!searchQuery) {
         alert("Please enter a search query.");
@@ -349,7 +349,7 @@ function suggestNames(input, callback) {
 
 
 function updateSuggestions(suggestions) {
-    const suggestionsList = $("#suggestions");
+    const suggestionsList = $("#staffSuggestions");
 
     suggestionsList.empty();
 
@@ -357,15 +357,15 @@ function updateSuggestions(suggestions) {
         suggestionsList.append(`<li>${suggestion}</li>`);
     });
 }
-$("#searchBar").on('input', function() {
+$("#searchStaffBar").on('input', function() {
     const input = $(this).val();
     suggestNames(input,function (suggestions) {
         updateSuggestions(suggestions);
 
         if (input.trim() === '') {
-            $("#suggestions").hide();
+            $("#staffSuggestions").hide();
         } else {
-            $("#suggestions").show();
+            $("#staffSuggestions").show();
         }
     });
 });

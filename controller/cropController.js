@@ -13,7 +13,7 @@ $("#btnAddCrop").on('click',()=>{
     let cropCategory = $("#cropCategory").val();
     let cropImg = $("#cropImg")[0].files[0];
     let cropSeason = $("#cropSeason").val();
-    let fieldCode = $("#fieldCode").val();
+    let fieldCode = $("#fieldCodeInCrops").val();
 
     let formData = new FormData();
     formData.append("cropName", cropName);
@@ -67,7 +67,7 @@ function clearCrop() {
     $("#cropCategory").val("")
     $("#cropImg").val("")
     $("#cropSeason").val("")
-    $("#fieldCode").val("")
+    $("#fieldCodeInCrops").val("")
 
     $("#cropCodeUpdate").text("");
     $("#cropNameUpdate").val("");
@@ -75,7 +75,7 @@ function clearCrop() {
     $("#cropCategoryUpdate").val("");
     $("#cropImgUpdate").val("");
     $("#cropSeasonUpdate").val("");
-    $("#fieldCodeUpdate").val("");
+    $("#fieldCodeInCropsUpdate").val("");
 }
 
 function loadTable() {
@@ -132,7 +132,7 @@ $("#crop-table-tbody").on('click','tr',function (){
     $("#cropCategoryUpdate").val(cropCategory);
     $("#cropImgUpdate").val(cropImg);
     $("#cropSeasonUpdate").val(cropSeason);
-    $("#fieldCodeUpdate").val(fieldCode);
+    $("#fieldCodeInCropsUpdate").val(fieldCode);
 
 })
 $("#btnUpdateCrop").on('click', () => {
@@ -144,7 +144,7 @@ $("#btnUpdateCrop").on('click', () => {
     let cropCategoryUpdated = $("#cropCategoryUpdate").val();
     let cropImgUpdated = $("#cropImgUpdate")[0].files[0];
     let cropSeasonUpdated = $("#cropSeasonUpdate").val();
-    let fieldCodeUpdated = $("#fieldCodeUpdate").val();
+    let fieldCodeUpdated = $("#fieldCodeInCropsUpdate").val();
 
     /*const validationResult = validator.validateLog(logDetailsUpdated, logDateUpdated,logObservedImgUpdated);
     if (validationResult.isValid) {
@@ -223,7 +223,7 @@ $("#btnDeleteCrop").on('click', () => {
 
 
 $("#cropSearchButton").on('click', () => {
-    const searchQuery = $("#searchBar").val().trim().toLowerCase();
+    const searchQuery = $("#searchCropsBar").val().trim().toLowerCase();
 
     if (!searchQuery) {
         alert("Please enter a search query.");
@@ -295,7 +295,7 @@ function suggestNames(input, callback) {
 
 
 function updateSuggestions(suggestions) {
-    const suggestionsList = $("#suggestions");
+    const suggestionsList = $("#cropSuggestions");
 
     suggestionsList.empty();
 
@@ -303,15 +303,15 @@ function updateSuggestions(suggestions) {
         suggestionsList.append(`<li>${suggestion}</li>`);
     });
 }
-$("#searchBar").on('input', function() {
+$("#searchCropsBar").on('input', function() {
     const input = $(this).val();
     suggestNames(input,function (suggestions) {
         updateSuggestions(suggestions);
 
         if (input.trim() === '') {
-            $("#suggestions").hide();
+            $("#cropSuggestions").hide();
         } else {
-            $("#suggestions").show();
+            $("#cropSuggestions").show();
         }
     });
 });
