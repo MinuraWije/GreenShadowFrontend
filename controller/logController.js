@@ -103,7 +103,7 @@ $("#log-table-tbody").on('click','tr',function (){
     let logCode = $(this).find(".logCode").text()
     let logDetails = $(this).find(".logDetails").text()
     let logDate = $(this).find(".logDate").text()
-    let logObservedImg = $(this).find(".logObservedImage").text()
+    let logObservedImg = $(this).find(".observedImg").text()
 
     //console.log("code"+logCode,"details"+logDetails,"date"+logDate,"img"+logObservedImg)
 
@@ -140,7 +140,8 @@ $("#btnUpdateLog").on('click', () => {
         $.ajax({
             url: `http://localhost:5050/greenshadow/api/v1/log/${logCodeUpdated}`,
             type: 'PUT',
-            contentType: 'application/json',
+            processData: false, // Prevent jQuery from processing the FormData
+            contentType: false, // Let the browser set the Content-Type, including boundary
             data: newLogData,
             success: function (response) {
                 console.log("Response:", response); // Log response
