@@ -5,9 +5,13 @@
     <title>Title</title>
     <!--<link rel="stylesheet" href="assets/normalize.css">-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/normalize.css">
     <style>
-
-        #signup-section,#header-section{display: none;}
+        #login-section,#signup-section,#field-section,#crop-section,#log-section,#staff-section
+        ,#equipment-section,#vehicle-section{display: none;}
+        body{
+            background: dimgrey;
+        }
         .login-side-2 {
             /* fallback for old browsers */
             background: #fccb90;
@@ -58,39 +62,84 @@
                 border-bottom-right-radius: .3rem;
             }
         }
+        .banner {
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("https://static.vecteezy.com/system/resources/previews/036/324/445/non_2x/order-clothes-from-online-clothing-store-using-credit-card-e-commerce-mobile-shopping-digital-or-virtual-marketplace-online-shopping-internet-store-flat-illustration-for-landing-page-web-design-vector.jpg");
+            background-size: cover;
+            background-position: center ;
+        }
+        .banner img {
+            width: 100%;
+            height: 92.3vh;
+        }
+        .banner div:first-child{
+            width: 100%;
+            height: 70vh;
+            background: 50%;
+            background-color: black;
+        }
+        .content {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            color: #fff;
+        }
+        .content h1 {
+            font-size: 70px;
+            margin-top: 80px;
+            color: #1ce889;
+        }
+        .content p {
+            margin: 20px auto;
+            font-weight: 100;
+            line-height: 25px;
+        }
     </style>
 </head>
 
-<!--Header section-->
-<header id="header-section">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">POS System</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <span class="nav-link active" aria-current="page" id="nav-home">Home</span>
-                    </li>
-                    <li class="nav-item">
-                        <span class="nav-link" id="nav-customer">Customers</span>
-                    </li>
-                    <li class="nav-item">
-                        <span class="nav-link" id="nav-item" >Items</span>
-                    </li>
-                    <li class="nav-item">
-                        <span class="nav-link" id="nav-order" >Orders</span>
-                    </li>
-                    <li class="nav-item">
-                        <span class="nav-link" id="nav-order-details">Order Details</span>
-                    </li>
-                </ul>
+
+<main class="main-content">
+    <!--Header section-->
+    <header id="header-section">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">POS System</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <span class="nav-link active" aria-current="page" id="nav-home">Home</span>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link" id="nav-field">Field</span>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link" id="nav-crop" >Crop</span>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link" id="nav-log" >Log</span>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link" id="nav-staff">Staff</span>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link" id="nav-equipment">Equipment</span>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link" id="nav-vehicle">Vehicle</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
+</main>
+
 
 <body>
 
@@ -211,8 +260,809 @@
     </div>
 </section>
 
+<!--Dashboard section-->
+<section id="dashboard-section">
+    <div class="banner">
+        <img src="assets/img_1.png">
+        <div></div>
+        <div class="content">
+            <h1>Welcome to Green Shadow</h1>
+            <!--<div>
+                <button id="buttonCon" type="button">CONTACT US</button>
+            </div>-->
+        </div>
+    </div>
+</section>
+
+<!--Field Section-->
+<section id="field-section">
+    <div class="container mt-5">
+        <h5 class="card-header">Fields</h5>
+        <div class="card-body">
+
+            <div class="row mb-3">
+                <div class="col-md-6 text-start">  <!--d-grid gap-2 d-md-flex  justify-content-md-start-->
+                    <button class="btn btn-success me-md-2" type="button" data-bs-toggle="modal" data-bs-target="#newFieldModal">New Field</button>
+                    <button class="btn btn-warning me-md-2" type="button" data-bs-toggle="modal" data-bs-target="#updateFieldModal" id="updateFieldbtn">Update Field</button>
+                </div>
+                <div class="col-md-6">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search Log" aria-label="Search" id="searchFieldsBar">
+                        <button class="btn btn-primary" type="button" id="fieldSearchButton">Search</button>
+                    </form>
+                    <ul id="fieldSuggestions"></ul>
+                </div>
+
+            </div>
+            <div class="modal fade" id="newFieldModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header text-bg-success">
+                            <h1 class="modal-title fs-5" id="fieldModal">New Field</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!--<div class="mb-3">
+                                <label class="form-label">ID :</label>
+                                <input type="text" class="form-control" id="customerID">
+                            </div>-->
+                            <div class="mb-3">
+                                <label class="form-label">Name :</label>
+                                <input type="text" class="form-control" id="fieldName">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Location :</label>
+                                <input type="text" class="form-control" id="fieldLocation">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Size :</label>
+                                <input type="text" class="form-control" id="fieldSize">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Image 1 :</label>
+                                <input type="file" class="form-control" id="fieldImg1">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Image 2 :</label>
+                                <input type="file" class="form-control" id="fieldImg2">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-success" id="btnAddField">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="updateFieldModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header text-bg-success">
+                            <h1 class="modal-title fs-5" id="updateField">Update Field</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!--<div class="mb-3">
+                                <label class="form-label">ID :</label>
+                                <input type="text" class="form-control" id="customerID">
+                            </div>-->
+                            <div class="mb-3">
+                                <label id="fieldCodeUpdate" class="form-label">FXXX</label>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Name :</label>
+                                <input type="text" class="form-control" id="fieldNameUpdate">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Location :</label>
+                                <input type="text" class="form-control" id="fieldLocationUpdate">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Size :</label>
+                                <input type="text" class="form-control" id="fieldSizeUpdate">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Image 1 :</label>
+                                <input type="file" class="form-control" id="fieldImg1Update">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Image 2 :</label>
+                                <input type="file" class="form-control" id="fieldImg2Update">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-primary" id="btnUpdateField">Update </button>
+                            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal" id="btnDeleteField">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col">
+                    <table class="table" id="field-table">
+                        <thead>
+                        <tr>
+                            <th scope="col">Code</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Location</th>
+                            <th scope="col">Size</th>
+                            <th scope="col">Image 1</th>
+                            <th scope="col">Image 2</th>
+                        </tr>
+                        </thead>
+                        <tbody id="field-table-tbody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Crop section-->
+<section id="crop-section">
+    <div class="container mt-5">
+        <h5 class="card-header">Crops</h5>
+        <div class="card-body">
+
+            <div class="row mb-3">
+                <div class="col-md-6 text-start">  <!--d-grid gap-2 d-md-flex  justify-content-md-start-->
+                    <button class="btn btn-success me-md-2" type="button" data-bs-toggle="modal" data-bs-target="#newCropModal">New Crop</button>
+                    <button class="btn btn-warning me-md-2" type="button" data-bs-toggle="modal" data-bs-target="#updateCropModal" id="updateCropbtn">Update Crop</button>
+                </div>
+                <div class="col-md-6">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search Crop" aria-label="Search" id="searchCropsBar">
+                        <button class="btn btn-primary" type="button" id="cropSearchButton">Search</button>
+                    </form>
+                    <ul id="cropSuggestions"></ul>
+                </div>
+
+            </div>
+            <div class="modal fade" id="newCropModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header text-bg-success">
+                            <h1 class="modal-title fs-5" id="cropModal">New Crop</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!--<div class="mb-3">
+                                <label class="form-label">ID :</label>
+                                <input type="text" class="form-control" id="customerID">
+                            </div>-->
+                            <div class="mb-3">
+                                <label class="form-label">Name :</label>
+                                <input type="text" class="form-control" id="cropName">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Scientific Name :</label>
+                                <input type="text" class="form-control" id="cropScientificName">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Category :</label>
+                                <input type="text" class="form-control" id="cropCategory">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Image :</label>
+                                <input type="file" class="form-control" id="cropImg">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Season :</label>
+                                <input type="text" class="form-control" id="cropSeason">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Field Code :</label>
+                                <input type="text" class="form-control" id="fieldCodeInCrops">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-success" id="btnAddCrop">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="updateCropModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header text-bg-success">
+                            <h1 class="modal-title fs-5" id="updateCrop">Update Crop</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!--<div class="mb-3">
+                                <label class="form-label">ID :</label>
+                                <input type="text" class="form-control" id="customerID">
+                            </div>-->
+                            <div class="mb-3">
+                                <label id="cropCodeUpdate" class="form-label">CXXX</label>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Name :</label>
+                                <input type="text" class="form-control" id="cropNameUpdate">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Scientific Name :</label>
+                                <input type="text" class="form-control" id="cropScientificNameUpdate">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Category :</label>
+                                <input type="text" class="form-control" id="cropCategoryUpdate">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Image :</label>
+                                <input type="file" class="form-control" id="cropImgUpdate">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Season :</label>
+                                <input type="text" class="form-control" id="cropSeasonUpdate">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Field Code :</label>
+                                <input type="text" class="form-control" id="fieldCodeInCropsUpdate">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-primary" id="btnUpdateCrop">Update </button>
+                            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal" id="btnDeleteCrop">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col">
+                    <table class="table" id="crop-table">
+                        <thead>
+                        <tr>
+                            <th scope="col">Code</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Scientific Name</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Image</th>
+                            <th scope="col">Season</th>
+                            <th scope="col">Field Code</th>
+                        </tr>
+                        </thead>
+                        <tbody id="crop-table-tbody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Log-section-->
+<section id="log-section">
+    <div class="container mt-5">
+        <h5 class="card-header">Logs</h5>
+        <div class="card-body">
+
+            <div class="row mb-3">
+                <div class="col-md-6 text-start">  <!--d-grid gap-2 d-md-flex  justify-content-md-start-->
+                    <button class="btn btn-success me-md-2" type="button" data-bs-toggle="modal" data-bs-target="#newLogModal">New Log</button>
+                    <button class="btn btn-warning me-md-2" type="button" data-bs-toggle="modal" data-bs-target="#updateLogModal" id="updateLogbtn">Update Log</button>
+                </div>
+                <div class="col-md-6">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search Log" aria-label="Search" id="searchLogsBar">
+                        <button class="btn btn-primary" type="button" id="logSearchButton">Search</button>
+                    </form>
+                    <ul id="logSuggestions"></ul>
+                </div>
+
+            </div>
+            <div class="modal fade" id="newLogModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header text-bg-success">
+                            <h1 class="modal-title fs-5" id="logModal">New Log</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!--<div class="mb-3">
+                                <label class="form-label">ID :</label>
+                                <input type="text" class="form-control" id="customerID">
+                            </div>-->
+                            <div class="mb-3">
+                                <label class="form-label">Details :</label>
+                                <input type="text" class="form-control" id="logDetails">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Date :</label>
+                                <input type="date" class="form-control" id="logDate">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Observed Image :</label>
+                                <input type="file" class="form-control" id="logObservedImage">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-success" id="btnAddLog">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="updateLogModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header text-bg-success">
+                            <h1 class="modal-title fs-5" id="updateLog">Update Log</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!--<div class="mb-3">
+                                <label class="form-label">ID :</label>
+                                <input type="text" class="form-control" id="customerID">
+                            </div>-->
+                            <div class="mb-3">
+                                <label id="logCodeUpdate" class="form-label">LXXX</label>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Details :</label>
+                                <input type="text" class="form-control" id="logDetailsUpdate">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Date :</label>
+                                <input type="date" class="form-control" id="logDateUpdate">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Observed Image :</label>
+                                <input type="file" class="form-control" id="logObservedImageUpdate">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-primary" id="btnUpdateLog">Update </button>
+                            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal" id="btnDeleteLog">Delete</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col">
+                    <table class="table" id="log-table">
+                        <thead>
+                        <tr>
+                            <th scope="col">Code</th>
+                            <th scope="col">Details</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Image</th>
+                        </tr>
+                        </thead>
+                        <tbody id="log-table-tbody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!--Staff-section-->
+<section id="staff-section">
+    <div class="container mt-5">
+        <h5 class="card-header">Staff</h5>
+        <div class="card-body">
+
+            <div class="row mb-3">
+                <div class="col-md-6 text-start">  <!--d-grid gap-2 d-md-flex  justify-content-md-start-->
+                    <button class="btn btn-success me-md-2" type="button" data-bs-toggle="modal" data-bs-target="#newStaffModal">New Staff</button>
+                    <button class="btn btn-warning me-md-2" type="button" data-bs-toggle="modal" data-bs-target="#updateStaffModal" id="updateStaffbtn">Update Staff</button>
+                </div>
+                <div class="col-md-6">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search Staff" aria-label="Search" id="searchStaffBar">
+                        <button class="btn btn-primary" type="button" id="staffSearchButton">Search</button>
+                    </form>
+                    <ul id="staffSuggestions"></ul>
+                </div>
+
+            </div>
+            <div class="modal fade" id="newStaffModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header text-bg-success">
+                            <h1 class="modal-title fs-5" id="staffModal">New Staff</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!--<div class="mb-3">
+                                <label class="form-label">ID :</label>
+                                <input type="text" class="form-control" id="customerID">
+                            </div>-->
+                            <div class="mb-3">
+                                <label class="form-label">Name :</label>
+                                <input type="text" class="form-control" id="staffName">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Role :</label>
+                                <input type="text" class="form-control" id="staffRole">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Designation :</label>
+                                <input type="text" class="form-control" id="staffDesignation">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Gender :</label>
+                                <input type="text" class="form-control" id="staffGender">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Joined Date :</label>
+                                <input type="date" class="form-control" id="staffJoinedDate">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Email :</label>
+                                <input type="email" class="form-control" id="staffEmail">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">DOB :</label>
+                                <input type="date" class="form-control" id="staffDOB">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Address :</label>
+                                <input type="text" class="form-control" id="staffAddress">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Contact Number :</label>
+                                <input type="text" class="form-control" id="staffContactNumber">
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-success" id="btnAddStaff">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="updateStaffModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header text-bg-success">
+                            <h1 class="modal-title fs-5" id="updateStaff">Update Staff</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!--<div class="mb-3">
+                                <label class="form-label">ID :</label>
+                                <input type="text" class="form-control" id="customerID">
+                            </div>-->
+                            <div class="mb-3">
+                                <label id="staffIdUpdate" class="form-label">SXXX</label>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Name :</label>
+                                <input type="text" class="form-control" id="staffNameUpdate">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Role :</label>
+                                <input type="text" class="form-control" id="staffRoleUpdate">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Designation :</label>
+                                <input type="text" class="form-control" id="staffDesignationUpdate">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Gender :</label>
+                                <input type="text" class="form-control" id="staffGenderUpdate">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Joined Date :</label>
+                                <input type="date" class="form-control" id="staffJoinedDateUpdate">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Email :</label>
+                                <input type="email" class="form-control" id="staffEmailUpdate">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">DOB :</label>
+                                <input type="date" class="form-control" id="staffDOBUpdate">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Address :</label>
+                                <input type="text" class="form-control" id="staffAddressUpdate">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Contact Number :</label>
+                                <input type="text" class="form-control" id="staffContactNumberUpdate">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-primary" id="btnUpdateStaff">Update </button>
+                            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal" id="btnDeleteStaff">Delete</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col">
+                    <table class="table" id="staff-table">
+                        <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Role</th>
+                            <th scope="col">Designation</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">Joined Date</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">DOB</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Contact Number</th>
+                        </tr>
+                        </thead>
+                        <tbody id="staff-table-tbody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!--Equipment-section-->
+<section id="equipment-section">
+    <div class="container mt-5">
+        <h5 class="card-header">Equipments</h5>
+        <div class="card-body">
+
+            <div class="row mb-3">
+                <div class="col-md-6 text-start">  <!--d-grid gap-2 d-md-flex  justify-content-md-start-->
+                    <button class="btn btn-success me-md-2" type="button" data-bs-toggle="modal" data-bs-target="#newEquipmentModal">New Equipment</button>
+                    <button class="btn btn-warning me-md-2" type="button" data-bs-toggle="modal" data-bs-target="#updateEquipmentModal" id="updateEquipmentbtn">Update Equipment</button>
+                </div>
+                <div class="col-md-6">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search Equipment" aria-label="Search" id="searchEquipmentsBar">
+                        <button class="btn btn-primary" type="button" id="equipmentSearchButton">Search</button>
+                    </form>
+                    <ul id="equipmentSuggestions"></ul>
+                </div>
+
+            </div>
+            <div class="modal fade" id="newEquipmentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header text-bg-success">
+                            <h1 class="modal-title fs-5" id="equipmentModal">New Equipment</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!--<div class="mb-3">
+                                <label class="form-label">ID :</label>
+                                <input type="text" class="form-control" id="customerID">
+                            </div>-->
+                            <div class="mb-3">
+                                <label class="form-label">Equipment Name :</label>
+                                <input type="text" class="form-control" id="equipmentName">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Type :</label>
+                                <input type="text" class="form-control" id="equipmentType">
+                            </div>
+                            <div class="mb-3">
+                                <label for="equipmentStatus" class="form-label">Status</label>
+                                <select class="form-select" aria-label="Default select example" id="equipmentStatus">
+                                    <option selected>Select</option>
+                                    <option value="AVAILABLE">Available</option>
+                                    <option value="NOT_AVAILABLE">Not-Available</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-success" id="btnAddEquipment">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="updateEquipmentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header text-bg-success">
+                            <h1 class="modal-title fs-5" id="updateEquipment">Update Equipment</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!--<div class="mb-3">
+                                <label class="form-label">ID :</label>
+                                <input type="text" class="form-control" id="customerID">
+                            </div>-->
+                            <div class="mb-3">
+                                <label id="equipmentIdUpdate" class="form-label">EXXX</label>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Equipment Name :</label>
+                                <input type="text" class="form-control" id="equipmentNameUpdate">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Type :</label>
+                                <input type="text" class="form-control" id="equipmentTypeUpdate">
+                            </div>
+                            <div class="mb-3">
+                                <label for="equipmentStatusUpdate" class="form-label">Status</label>
+                                <select class="form-select" aria-label="Default select example" id="equipmentStatusUpdate">
+                                    <option selected>Select</option>
+                                    <option value="AVAILABLE">Available</option>
+                                    <option value="NOT_AVAILABLE">Not_Available</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-primary" id="btnUpdateEquipment">Update </button>
+                            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal" id="btnDeleteEquipment">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col">
+                    <table class="table" id="equipment-table">
+                        <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                        </thead>
+                        <tbody id="equipment-table-tbody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!--Vehicle-section-->
+<section id="vehicle-section">
+    <div class="container mt-5">
+        <h5 class="card-header">Vehicles</h5>
+        <div class="card-body">
+
+            <div class="row mb-3">
+                <div class="col-md-6 text-start">  <!--d-grid gap-2 d-md-flex  justify-content-md-start-->
+                    <button class="btn btn-success me-md-2" type="button" data-bs-toggle="modal" data-bs-target="#newVehicleModal">New Vehicle</button>
+                    <button class="btn btn-warning me-md-2" type="button" data-bs-toggle="modal" data-bs-target="#updateVehicleModal" id="updateVehiclebtn">Update Vehicle</button>
+                </div>
+                <div class="col-md-6">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search Vehicle" aria-label="Search" id="searchVehicleBar">
+                        <button class="btn btn-primary" type="button" id="vehicleSearchButton">Search</button>
+                    </form>
+                    <ul id="vehicleSuggestions"></ul>
+                </div>
+
+            </div>
+            <div class="modal fade" id="newVehicleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header text-bg-success">
+                            <h1 class="modal-title fs-5" id="vehicleModal">New Vehicle</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!--<div class="mb-3">
+                                <label class="form-label">ID :</label>
+                                <input type="text" class="form-control" id="customerID">
+                            </div>-->
+                            <div class="mb-3">
+                                <label class="form-label">License Plate :</label>
+                                <input type="text" class="form-control" id="vehicleLicensePlateNumber">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Category :</label>
+                                <input type="text" class="form-control" id="vehicleCategory">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Fuel Type :</label>
+                                <input type="text" class="form-control" id="vehicleFuelType">
+                            </div>
+                            <div class="mb-3">
+                                <label for="vehicleStatus" class="form-label">Status</label>
+                                <select class="form-select" aria-label="Default select example" id="vehicleStatus">
+                                    <option selected>Select</option>
+                                    <option value="AVAILABLE">Available</option>
+                                    <option value="NOT_AVAILABLE">Not_Available</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-success" id="btnAddVehicle">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="updateVehicleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header text-bg-success">
+                            <h1 class="modal-title fs-5" id="updateVehicle">Update Vehicle</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!--<div class="mb-3">
+                                <label class="form-label">ID :</label>
+                                <input type="text" class="form-control" id="customerID">
+                            </div>-->
+                            <div class="mb-3">
+                                <label id="vehicleCodeUpdate" class="form-label">VXXX</label>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">License Plate Number :</label>
+                                <input type="text" class="form-control" id="vehicleLicensePlateNumberUpdate">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Category :</label>
+                                <input type="text" class="form-control" id="vehicleCategoryUpdate">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Fuel Type :</label>
+                                <input type="text" class="form-control" id="vehicleFuelTypeUpdate">
+                            </div>
+                            <div class="mb-3">
+                                <label for="vehicleStatusUpdate" class="form-label">Status</label>
+                                <select class="form-select" aria-label="Default select example" id="vehicleStatusUpdate">
+                                    <option selected>Select</option>
+                                    <option value="AVAILABLE">Available</option>
+                                    <option value="NOT_AVAILABLE">Not_Available</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-primary" id="btnUpdateVehicle">Update </button>
+                            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal" id="btnDeleteVehicle">Delete</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col">
+                    <table class="table" id="vehicle-table">
+                        <thead>
+                        <tr>
+                            <th scope="col">Code</th>
+                            <th scope="col">License Plate</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Fuel Type</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                        </thead>
+                        <tbody id="vehicle-table-tbody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
 <script src="assets/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script type="module" src="controller/fieldController.js"></script>
+<script type="module" src="controller/cropController.js"></script>
+<script type="module" src="controller/logController.js"></script>
+<script type="module" src="controller/staffController.js"></script>
+<script type="module" src="controller/equipmentController.js"></script>
+<script type="module" src="controller/vehicleController.js"></script>
 
 </body>
 </html>
