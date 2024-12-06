@@ -28,6 +28,8 @@ $("#btnAddEquipment").on('click',()=>{
             success:function (results){
                 console.log(results)
                 alert('Equipment data was saved successfully.')
+                clearEquipment()
+                loadTable()
             },
             error:function (error){
                 console.log(error)
@@ -47,8 +49,7 @@ $("#btnAddEquipment").on('click',()=>{
             alert('Invalid Status');
         }
     }
-    clearEquipment()
-    loadTable()
+
 })
 function clearEquipment() {
     $("#equipmentName").val("")

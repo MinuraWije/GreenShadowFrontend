@@ -33,6 +33,8 @@ $("#btnAddField").on('click',()=>{
         success:function (results){
             console.log(results)
             alert('Field data was saved successfully.')
+            clearField()
+            loadTable()
         },
         error:function (error){
             console.log(error)
@@ -55,8 +57,7 @@ $("#btnAddField").on('click',()=>{
             alert('Invalid Status');
         }*!/
     }*/
-    clearField()
-    loadTable()
+
 })
 function clearField() {
     $("#fieldName").val("")

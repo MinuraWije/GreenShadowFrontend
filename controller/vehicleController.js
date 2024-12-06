@@ -30,6 +30,8 @@ $("#btnAddVehicle").on('click',()=>{
             success:function (results){
                 console.log(results)
                 alert('Vehicle data was saved successfully.')
+                clearVehicle()
+                loadTable()
             },
             error:function (error){
                 console.log(error)
@@ -52,8 +54,7 @@ $("#btnAddVehicle").on('click',()=>{
             alert('Invalid Status');
         }
     }
-    clearVehicle()
-    loadTable()
+
 })
 function clearVehicle() {
     $("#vehicleLicensePlateNumber").val("")

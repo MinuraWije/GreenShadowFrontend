@@ -30,6 +30,8 @@ $("#btnAddLog").on('click',()=>{
             success:function (results){
                 console.log(results)
                 alert('Log data was saved successfully.')
+                clearLog()
+                loadTable()
             },
             error:function (error){
                 console.log(error)
@@ -52,8 +54,7 @@ $("#btnAddLog").on('click',()=>{
             alert('Invalid Status');
         }*!/
     }*/
-    clearLog()
-    loadTable()
+
 })
 function clearLog() {
     $("#logDetails").val("")

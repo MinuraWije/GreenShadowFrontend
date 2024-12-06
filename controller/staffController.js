@@ -40,6 +40,8 @@ $("#btnAddStaff").on('click',()=>{
             success:function (results){
                 console.log(results)
                 alert('Staff data was saved successfully.')
+                clearStaff()
+                loadTable()
             },
             error:function (error){
                 console.log(error)
@@ -77,9 +79,7 @@ $("#btnAddStaff").on('click',()=>{
             alert('Invalid Contact Number');
         }
     }*/
-    clearStaff()
-    loadTable()
-    console.log("asdd")
+
 })
 function clearStaff() {
     $("#staffName").val("")
