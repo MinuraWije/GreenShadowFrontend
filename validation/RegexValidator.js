@@ -60,7 +60,7 @@ export class RegexValidator {
         return this.statusRegex.test(status);
     }*/
 
-    validateVehicle(vehicleCode, licensePlateNum, category, fuelType, status) {
+    validateVehicle(licensePlateNum, category, fuelType, status) {
         return {
             /*isVehicleCodeValid: this.validateVehicleCode(vehicleCode),*/
             isLicensePlateNumValid: this.validateLicensePlateNum(licensePlateNum),
