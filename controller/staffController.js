@@ -144,15 +144,15 @@ $("#staff-table-tbody").on('click','tr',function (){
 
 
     let staffId = $(this).find(".staffId").text()
-    let staffName = $(this).find(".name").text()
-    let staffRole = $(this).find(".role").text()
-    let staffDesignation = $(this).find(".designation").text()
-    let staffGender = $(this).find(".gender").text()
-    let staffJoinedDate = $(this).find(".joinedDate").text()
-    let staffEmail = $(this).find(".email").text()
+    let staffName = $(this).find(".staffName").text()
+    let staffRole = $(this).find(".staffRole").text()
+    let staffDesignation = $(this).find(".staffDesignation").text()
+    let staffGender = $(this).find(".staffGender").text()
+    let staffJoinedDate = $(this).find(".staffJoinedDate").text()
+    let staffEmail = $(this).find(".staffEmail").text()
     let staffDob = $(this).find(".dob").text()
-    let staffAddress = $(this).find(".address").text()
-    let staffContactNum = $(this).find(".contactNum").text()
+    let staffAddress = $(this).find(".staffAddress").text()
+    let staffContactNum = $(this).find(".staffContactNum").text()
 
 
     $("#updateStaffbtn").click()

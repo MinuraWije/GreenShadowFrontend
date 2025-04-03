@@ -112,8 +112,8 @@ $("#field-table-tbody").on('click','tr',function (){
 
     let fieldCode = $(this).find(".fieldCode").text()
     let fieldName = $(this).find(".fieldName").text()
-    let fieldLocation = $(this).find(".location").text()
-    let fieldSize = $(this).find(".size").text()
+    let fieldLocation = $(this).find(".fieldLocation").text()
+    let fieldSize = $(this).find(".fieldSize").text()
     let fieldImg1 = $(this).find(".img1").text()
     let fieldImg2 = $(this).find(".img2").text()
 
